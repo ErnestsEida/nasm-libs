@@ -1,10 +1,10 @@
 ;FD ( file descriptors )
 %define STDOUT 0
 %define STDIN 3
+
 ;OPCODES
 %define SYS_WRITE 1
 %define SYS_READ 0
-%define SYS_EXIT 60
 
 %macro stringLen 0
     PUSH RCX

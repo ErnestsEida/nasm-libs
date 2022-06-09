@@ -1,3 +1,5 @@
+%define SYS_EXIT 60
+
 %macro pushStackBase 0
     push rbp
     mov rbp , rsp
