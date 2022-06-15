@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if test -f "main.o"; then
+    rm main.o
+fi
+
+if test -f "main"; then
+    rm main
+fi
+
+nasm -f elf64 main.asm
+if test -f "main.o"; then
+    ld -o main main.o
+    if test -f "main"; then
+        ./main
+        rm main main.o
+    fi
+fi
