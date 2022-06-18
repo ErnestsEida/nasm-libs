@@ -1,4 +1,10 @@
 #!/bin/bash
+if nasm -v; then
+    echo 
+else
+    echo Downloading NASM...
+    sudo apt-get install nasm
+fi
 
 if test -f "main.o"; then
     rm main.o
@@ -10,8 +16,12 @@ fi
 
 nasm -f elf64 main.asm
 if test -f "main.o"; then
+    echo NASM Compiled...
     ld -o main main.o
     if test -f "main"; then
+        echo Linked...
+        echo Running...
+        echo
         ./main
         rm main main.o
     fi
