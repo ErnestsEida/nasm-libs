@@ -7,4 +7,6 @@ Repository contains libraries to ease use of Assembly(NASM) by using human like 
 3) Write code under >> **_start:**
 4) run _main.asm_ by executing **run** file
 
-**run** file should automatically compile code and execute it (display it if it has to), and afterwards cleans up the object file and executable 
+**run** file should automatically compile code and execute it (display it if it has to), and afterwards cleans up the object file and executable.
+
+**If you don't have NASM installed, _RUN file_ will ask for password to install it**
